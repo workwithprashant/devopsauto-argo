@@ -14,7 +14,7 @@ resource "argocd_project" "project" {
     name      = var.argo_project
     namespace = var.argo_server_namespace
     labels = {
-      env = var.env
+      env = "prod"
       name = var.argo_project
     }
   }
