@@ -2,6 +2,18 @@ variable "argo_server" {
 	type = string
 }
 
+variable "state_key" {
+	type = string
+}
+
+variable "access_key" {
+	type = string
+}
+
+variable "secret_key" {
+	type = string
+}
+
 variable "argo_server_token" {
 	type = string
 }
