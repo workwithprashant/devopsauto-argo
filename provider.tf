@@ -3,7 +3,7 @@ terraform {
 
   backend "s3" {
     bucket = "devops-auto-toolsg"
-    key    = var.state_key
+    key    = "jenkins"
     region = "us-east-2"
   }
 
