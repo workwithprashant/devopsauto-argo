@@ -1,6 +1,8 @@
 terraform {
   required_version = ">= 0.13.1"
 
+  backend "s3" {}
+
   required_providers {
     argocd = {
       source = "oboukili/argocd"
