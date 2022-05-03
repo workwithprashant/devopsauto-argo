@@ -1,12 +1,6 @@
 terraform {
   required_version = ">= 0.13.1"
 
-  backend "s3" {
-    bucket = "devops-auto-toolsg"
-    key    = "jenkins"
-    region = "us-east-2"
-  }
-
   required_providers {
     argocd = {
       source = "oboukili/argocd"
