@@ -5,8 +5,6 @@ terraform {
     bucket = "devops-auto-toolsg"
     key    = var.state_key
     region = "us-east-2"
-    access_key = var.access_key
-    secret_key = var.secret_key
   }
 
   required_providers {
