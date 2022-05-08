@@ -9,6 +9,7 @@ resource "argocd_repository" "private" {
 }
 
 
+
 resource "argocd_project" "project" {
   metadata {
     name      = var.argo_project
