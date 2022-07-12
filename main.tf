@@ -36,9 +36,9 @@ resource "argocd_project" "project" {
     }
   }
 
-  depends_on = [
+  /*depends_on = [
     argocd_repository.private,
-  ]
+  ]*/
 }
 
 
