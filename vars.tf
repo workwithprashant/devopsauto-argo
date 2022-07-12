@@ -27,6 +27,11 @@ variable "git_branch" {
 	type = string
 }
 
+variable "repo_exists" {
+	type = bool
+	default = false
+}
+
 variable "argo_project" {
 	type = string
 }

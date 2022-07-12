@@ -1,5 +1,6 @@
 
 resource "argocd_repository" "private" {
+  count  = var.repo_exists ? 0 : 1
   name            = var.argo_project
   repo            = var.git_repository
   type            = "git"
@@ -35,9 +36,9 @@ resource "argocd_project" "project" {
     }
   }
 
-  depends_on = [
+  /*depends_on = [
     argocd_repository.private,
-  ]
+  ]*/
 }
 
 
@@ -69,9 +70,9 @@ resource "argocd_application" "helmfile" {
     }
 
   }
-  depends_on = [
+  /*depends_on = [
      argocd_repository.private,
      argocd_project.project,
-  ]
+  ]*/
 }
 
