@@ -1,6 +1,6 @@
 
 resource "argocd_repository" "private" {
-  count  = var.repo_exists ? 0 : 1
+  count  = var.repo_exists == "true" ? 0 : 1
   name            = var.argo_project
   repo            = var.git_repository
   type            = "git"
