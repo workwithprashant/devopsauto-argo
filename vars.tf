@@ -27,10 +27,10 @@ variable "git_branch" {
 	type = string
 }
 
-variable "repo_exists" {
+/*variable "repo_exists" {
 	type = string
 	default = ""
-}
+}*/
 
 variable "argo_project" {
 	type = string

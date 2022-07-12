@@ -1,5 +1,5 @@
 
-resource "argocd_repository" "private" {
+/*resource "argocd_repository" "private" {
   count  = var.repo_exists == "true" ? 0 : 1
   name            = var.argo_project
   repo            = var.git_repository
@@ -7,7 +7,7 @@ resource "argocd_repository" "private" {
   username        = var.git_username
   password        = var.git_password
   insecure        = false
-}
+}*/
 
 
 
@@ -36,9 +36,9 @@ resource "argocd_project" "project" {
     }
   }
 
-  /*depends_on = [
+  depends_on = [
     argocd_repository.private,
-  ]*/
+  ]
 }
 
 
@@ -70,9 +70,8 @@ resource "argocd_application" "helmfile" {
     }
 
   }
-  /*depends_on = [
-     argocd_repository.private,
+  depends_on = [
      argocd_project.project,
-  ]*/
+  ]
 }
 
